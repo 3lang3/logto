@@ -88,8 +88,7 @@
     "extends": "@silverhand/react",
     "rules": {
       "complexity": "off",
-      "@typescript-eslint/prefer-nullish-coalescing": "off",
-      "no-restricted-syntax": "off"
+      "@typescript-eslint/prefer-nullish-coalescing": "off"
     }
   },
   "stylelint": {

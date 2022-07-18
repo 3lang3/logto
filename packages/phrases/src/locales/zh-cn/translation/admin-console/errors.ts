@@ -6,6 +6,8 @@ const errors = {
   missing_total_number: '无法从返回的头部信息中找到 Total-Number',
   invalid_uri_format: '无效的 URI 格式',
   invalid_origin_format: '无效的 URI origin 格式',
+  invalid_error_message_format: '非法的错误信息格式',
+  invalid_navigator: '非法的 navigator 类型，应包含 `block` 和 `navigate` 属性',
   required_field_missing: '请输入{{field}}',
   required_field_missing_plural: '至少需要输入一个{{field}}',
   more_details: '查看详情',

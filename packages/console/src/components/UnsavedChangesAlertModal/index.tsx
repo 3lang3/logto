@@ -1,3 +1,4 @@
+import { assert } from '@silverhand/essentials';
 import type { Blocker, Transition } from 'history';
 import { useCallback, useContext, useLayoutEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -5,9 +6,11 @@ import { UNSAFE_NavigationContext, Navigator } from 'react-router-dom';
 
 import ConfirmModal from '../ConfirmModal';
 
+type BlockFunction = (blocker: Blocker) => () => void;
+
 type BlockerNavigator = Navigator & {
   location: Location;
-  block(blocker: Blocker): () => void;
+  block: BlockFunction;
 };
 
 type Props = {
@@ -23,14 +26,23 @@ const UnsavedChangesAlertModal = ({ hasUnsavedChanges }: Props) => {
   const { t } = useTranslation(undefined, { keyPrefix: 'admin_console' });
 
   useLayoutEffect(() => {
+    function validate(navigator: Navigator): asserts navigator is BlockerNavigator {
+      assert(
+        'block' in navigator && 'location' in navigator,
+        new Error(t('errors.invalid_navigator'))
+      );
+    }
+
     if (!hasUnsavedChanges) {
       return;
     }
 
+    validate(navigator);
+
     const {
       block,
       location: { pathname },
-    } = navigator as BlockerNavigator;
+    } = navigator;
 
     const unblock = block((transition) => {
       const {
@@ -54,7 +66,7 @@ const UnsavedChangesAlertModal = ({ hasUnsavedChanges }: Props) => {
     });
 
     return unblock;
-  }, [navigator, hasUnsavedChanges]);
+  }, [navigator, hasUnsavedChanges, t]);
 
   const leavePage = useCallback(() => {
     transition?.retry();
