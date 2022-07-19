@@ -854,7 +854,7 @@ importers:
       koa-logger: ^3.2.1
       koa-mount: ^4.0.0
       koa-proxies: ^0.12.1
-      koa-router: ^11.0.0
+      koa-router: ^12.0.0
       koa-send: ^5.0.1
       lint-staged: ^13.0.0
       lodash.pick: ^4.4.0
@@ -917,7 +917,7 @@ importers:
       koa-logger: 3.2.1
       koa-mount: 4.0.0
       koa-proxies: 0.12.1_debug@4.3.4+koa@2.13.4
-      koa-router: 11.0.1
+      koa-router: 12.0.0
       koa-send: 5.0.1
       lodash.pick: 4.4.0
       module-alias: 2.2.2
@@ -4529,7 +4529,6 @@ packages:
       - babel-jest
       - esbuild
       - typescript
-    dev: false
 
   /@silverhand/jest-config/0.17.0_u4suh3umvg724wu2nufptihvny:
     resolution: {integrity: sha512-Syb9S2Hqbg3UcuGq+qByv+SJKWC6jrFSQp6JeGbsqLWlGTDjXX3QpHMaq5p9XYldlns6ZT6QQ7Q19CtbqUFU+A==}
@@ -4550,7 +4549,6 @@ packages:
       - babel-jest
       - esbuild
       - typescript
-    dev: false
 
   /@silverhand/ts-config-react/0.17.0_typescript@4.6.2:
     resolution: {integrity: sha512-vsZMcWVzaQT2Qb2b46jbmbcXPHxEKz3snQzQhHHV4IRJbLWnTtswOnNwfPRdXsW7/xcYfF+EM9Bw4Q7Cmib2nA==}
@@ -8937,7 +8935,7 @@ packages:
     resolution: {integrity: sha512-carPklcUh7ROWRK7Cv27RPtdhYhUsela/ue5/jKzjegVvXDqM2ILE9Q2BGn9JZJh1g87cp56su/FgQSzcWS8cQ==}
 
   /http-errors/1.4.0:
-    resolution: {integrity: sha1-bAJC3qaz33r9oVPHEImzHG6Cqr8=}
+    resolution: {integrity: sha512-oLjPqve1tuOl5aRhv8GK5eHpqP1C9fb+Ol+XTLjKfLltE44zdDbEdjPSbU7Ch5rSNsVFqZn97SrMmZLdu1/YMw==}
     engines: {node: '>= 0.6'}
     dependencies:
       inherits: 2.0.1
@@ -8945,7 +8943,7 @@ packages:
     dev: false
 
   /http-errors/1.6.3:
-    resolution: {integrity: sha1-i1VoC7S+KDoLW/TqLjhYC+HZMg0=}
+    resolution: {integrity: sha512-lks+lVC8dgGyh97jxvxeYTWQFvh4uw4yC12gVl63Cg30sjPX4wuGcdkICVXDAESr6OJGjqGA8Iz5mkeN6zlD7A==}
     engines: {node: '>= 0.6'}
     dependencies:
       depd: 1.1.2
@@ -10402,8 +10400,8 @@ packages:
       - debug
     dev: false
 
-  /koa-router/11.0.1:
-    resolution: {integrity: sha512-n6/AbNu9JbW+6pBqfFE5MRshXdkjMjEdNHlT79FCab/+VfG+THOh5vIs8GlFUeBldYjkof9H3HCPabLWiZO4vQ==}
+  /koa-router/12.0.0:
+    resolution: {integrity: sha512-zGrdiXygGYW8WvrzeGsHZvKnHs4DzyGoqJ9a8iHlRkiwuEAOAPyI27//OlhoWdgFAEIM3qbUgr0KCuRaP/TCag==}
     engines: {node: '>= 12'}
     dependencies:
       http-errors: 2.0.0
@@ -11118,7 +11116,7 @@ packages:
     dev: true
 
   /methods/1.1.2:
-    resolution: {integrity: sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=}
+    resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
     engines: {node: '>= 0.6'}
 
   /micromark-core-commonmark/1.0.6:
